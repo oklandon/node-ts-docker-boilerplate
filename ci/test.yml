@@ -5,9 +5,6 @@ image_resource:
   type: registry-image
   source: { repository: node, tag: "12" }
 
-inputs:
-  - name: node-ts-docker-boilerplate
-
 run:
   path: /bin/sh
   args:
