@@ -1,0 +1,21 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: { repository: node, tag: "12" }
+
+inputs:
+  - name: node-ts-docker-boilerplate
+
+run:
+  path: /bin/sh
+  args:
+    - -c
+    - |
+      cd node-ts-docker-boilerplate
+      if ! yarn install
+      then
+        echo "fail"
+        exit 1
+      fi
